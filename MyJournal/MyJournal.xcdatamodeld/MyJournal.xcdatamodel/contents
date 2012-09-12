@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1487" systemVersion="12B19" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Journal" syncable="YES">
+        <attribute name="end_time" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="start_time" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="contents" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="JournalContent" inverseName="journal" inverseEntity="JournalContent" syncable="YES"/>
+    </entity>
+    <entity name="JournalContent" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="journal" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Journal" inverseName="contents" inverseEntity="Journal" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Journal" positionX="133" positionY="-90" width="128" height="88"/>
+        <element name="JournalContent" positionX="486" positionY="-9" width="128" height="88"/>
+    </elements>
+</model>
